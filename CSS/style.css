@@ -359,17 +359,8 @@ body::before {
     z-index: -1;
 }
 
-/*  Add a light blue semi-transparent background to the text.  */
-.text-bg {
-    background-color: rgba(145, 207, 255, 0.5); /* semi-transparent */
-    padding: 2px 6px;   /* Blank space around the text */
-    border-radius: 4px;
-    display: inline;    /* Only cover the text, not the entire line. */
-}
-/*  Apply globally to all text  */
 h1, h2, h3, p {
-    background-color: rgba(145, 207, 255, 0.5);
-    padding: 2px 4px;
-    border-radius: 4px;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* 浅白色阴影 */
 }
+
 
