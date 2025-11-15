@@ -39,7 +39,6 @@ header, section {
 }
 
 .destination {
-    background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 10px;
@@ -251,11 +250,9 @@ footer {
 
 /* Optional: style story text area */
 .story {
-    background-color: white;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 
@@ -362,4 +359,17 @@ body::before {
     z-index: -1;
 }
 
+/*  Add a light blue semi-transparent background to the text.  */
+.text-bg {
+    background-color: rgba(145, 207, 255, 0.5); /* semi-transparent */
+    padding: 2px 6px;   /* Blank space around the text */
+    border-radius: 4px;
+    display: inline;    /* Only cover the text, not the entire line. */
+}
+/*  Apply globally to all text  */
+h1, h2, h3, p {
+    background-color: rgba(145, 207, 255, 0.5);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
 
