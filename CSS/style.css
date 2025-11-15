@@ -320,4 +320,20 @@ footer {
   }
 }
 
+.story-btn {
+    background-color: #e63946;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.story-btn:hover {
+    background-color: #d62828;
+    transform: scale(1.05);
+}
+
+
 
