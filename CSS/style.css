@@ -359,8 +359,10 @@ body::before {
     z-index: -1;
 }
 
-h1, h2, h3, p {
-    text-shadow: 1px 1px 3px rgba(255,255,255,0.8); /* 浅白色阴影 */
+h1 span, h2 span, h3 span, p span {
+    background-color: rgba(255,255,255,0.7);
+    padding: 2px 4px;
+    border-radius: 4px;
+    display: inline;
 }
-
 
