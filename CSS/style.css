@@ -366,4 +366,16 @@ h1 span, h2 span, h3 span, p span {
     display: inline;
 }
 
+/* Styles below apply ONLY to the Trips page images */
+.trip-list .trip-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
 
