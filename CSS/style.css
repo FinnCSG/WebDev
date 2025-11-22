@@ -368,13 +368,14 @@ h1 span, h2 span, h3 span, p span {
 
 /* Styles below apply ONLY to the Trips page images */
 .trip-list .trip-img {
-    width: 280px;        
-    height: 180px;       
+    width: 560px;        
+    height: 360px;       
     object-fit: cover;   
     border-radius: 10px;
     display: block;
     margin: 0;          
 }
+
 
 
 
