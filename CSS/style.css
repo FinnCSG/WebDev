@@ -355,7 +355,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.2); /* White translucent mask */
+    background: rgba(255,255,255,0.4); /* White translucent mask */
     z-index: -1;
 }
 
@@ -380,6 +380,7 @@ h1 span, h2 span, h3 span, p span {
 .trip-list .trip {
     margin-bottom: 40px;
 }
+
 
 
 
