@@ -378,8 +378,9 @@ h1 span, h2 span, h3 span, p span {
 
 /* Spacing between trips */
 .trip-list .trip {
-    margin-bottom: 40px;
+    margin-bottom: 160px;
 }
+
 
 
 
