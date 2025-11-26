@@ -49,7 +49,7 @@ header, section {
 .destination img {
     width: 100%;                   /* The width of the picture matches that of the card. */
     height: 200px;                 /* Uniform height */
-    object-fit: cover;             /* 保持比例裁剪 */
+    object-fit: cover;             /* Crop with aspect ratio */
     border-radius: 10px;
 }
 
@@ -380,6 +380,7 @@ h1 span, h2 span, h3 span, p span {
 .trip-list .trip {
     margin-bottom: 220px;
 }
+
 
 
 
