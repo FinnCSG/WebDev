@@ -30,15 +30,30 @@
 
         <p><span class="text-bg">Please fill out the form below and we'll get back to you as soon as possible.</span></p>
 
-        <form action="#" method="post">
+        <form action="#" method="post" id="contactForm" novalidate> 
+            
+            <!-- Name -->
             <label for="name"><span class="text-bg">Name:</span></label><br>
             <input type="text" id="name" name="name" required><br><br>
-
+            <p id="nameError" class="error" aria-live="polite"></p><br>
+            
+            <!-- Email -->
             <label for="email"><span class="text-bg">Email:</span></label><br>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email" required>
+            <p id="emailError" class="error" aria-live="polite"></p><br>
 
+            <!-- Phone -->
+            <label for="phone"><span class="text-bg">Phone Number:</span></label><br>
+            <input type="tel" id="phone" name="phone" 
+                   pattern="^[0-9+\-\s]{7,15}$" 
+                   placeholder="e.g., +353 85 123 4567"
+                   required>
+            <p id="phoneError" class="error" aria-live="polite"></p><br>
+
+            <!-- Message -->
             <label for="message"><span class="text-bg">Message:</span></label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <p id="messageError" class="error" aria-live="polite"></p><br>
 
             <button class="story-btn">Send</button>
         </form>
@@ -48,5 +63,53 @@
     <footer>
         <p><span class="text-bg">&copy; 2025 Lucas Snow Adventures</span></p>
     </footer>
+    <!-- JavaScript Validation -->
+    <script>
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function(event) {
+            let valid = true;
+
+            // Clear all error messages
+            document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+            // Name validation
+            const name = document.getElementById("name");
+            if (name.value.trim() === "") {
+                document.getElementById("nameError").textContent = "Please enter your name.";
+                valid = false;
+            }
+
+            // Email validation (HTML already checks pattern)
+            const email = document.getElementById("email");
+            if (!email.checkValidity()) {
+                document.getElementById("emailError").textContent = "Please enter a valid email address.";
+                valid = false;
+            }
+
+            // Phone validation (JavaScript requirement)
+            const phone = document.getElementById("phone");
+            const phonePattern = /^[0-9+\-\s]{7,15}$/;
+
+            if (!phonePattern.test(phone.value.trim())) {
+                document.getElementById("phoneError").textContent =
+                    "Please enter a valid phone number (7–15 digits, spaces, +, or -).";
+                valid = false;
+            }
+
+            // Message validation
+            const message = document.getElementById("message");
+            if (message.value.trim() === "") {
+                document.getElementById("messageError").textContent = "Please enter a message.";
+                valid = false;
+            }
+
+            // Stop form submission if any field fails validation
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
+
